@@ -1,0 +1,119 @@
+﻿<main>
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="hero text-center justify-content-center d-flex flex-column">
+                    <div class="logo ">
+                        <img src="./assets/images/logo.png" alt="">
+                    </div>
+                    <div class="title ">
+                        <p>Senkadagala</p>
+                    </div>
+                    <div class="subtitle ">
+                        <p>A simple one page HTML layout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 ">
+                    <div class="image text-center">
+                        <img src="./assets/images/monitor.png" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 ">
+                    <div class="title text-center">
+                        <p>What is Senkadagala?</p>
+                    </div>
+                    <div class="text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet dolor nec diam pharetra, eu sodales massa euismod. Maecenas ut tellus sit amet lectus molestie dapibus. Quisque fermentum rutrum felis, nec hendrerit diam mollis.
+                            <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id ultricies felis. Fusce sed nisi velit. Quisque cursus pharetra diam, non congue ligula sodales at. Phasellus sodales sem sagittis arcu vulputate dictum. Vestibulum faucibus malesuada risus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="members">
+        <div class="container">
+            <div class="row">
+                <col-12 class="col-md-6 col-lg-4">
+                    <div class="myCard text-center">
+                        <div class="image">
+                            <img src="./assets/images/user1.png" alt="">
+                        </div>
+                        <div class="memberName">
+                            <p>Member One</p>
+                        </div>
+                        <div class="role">
+                            <p>Awesome Designation</p>
+                        </div>
+                        <div class="desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet dolor nec diam pharetra, eu sodales massa euismod. Maecenas ut tellus sit amet lectus molestie dapibus. Quisque fermentum rutrum felis, nec hendrerit diam mollis vitae. Integer sodales varius odio, vel pharetra ante rhoncus vel. Phasellus quis urna rutrum, molestie purus.</p>
+                        </div>
+                    </div>
+                </col-12>
+                <col-12 class="col-md-6 col-lg-4">
+                    <div class="myCard text-center">
+                        <div class="image">
+                            <img src="./assets/images/user2.png" alt="">
+                        </div>
+                        <div class="memberName">
+                            <p>Member Two</p>
+                        </div>
+                        <div class="role">
+                            <p>Awesome Designation</p>
+                        </div>
+                        <div class="desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet dolor nec diam pharetra, eu sodales massa euismod. Maecenas ut tellus sit amet lectus molestie dapibus. Quisque fermentum rutrum felis, nec hendrerit diam mollis vitae. Integer sodales varius odio, vel pharetra ante rhoncus vel. Phasellus quis urna rutrum, molestie purus.</p>
+                        </div>
+                    </div>
+                </col-12>
+                <col-12 class="col-md-6 col-lg-4">
+                    <div class="myCard text-center">
+                        <div class="image">
+                            <img src="./assets/images/user3.png" alt="">
+                        </div>
+                        <div class="memberName">
+                            <p>Member Three</p>
+                        </div>
+                        <div class="role">
+                            <p>Awesome Designation</p>
+                        </div>
+                        <div class="desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet dolor nec diam pharetra, eu sodales massa euismod. Maecenas ut tellus sit amet lectus molestie dapibus. Quisque fermentum rutrum felis, nec hendrerit diam mollis vitae. Integer sodales varius odio, vel pharetra ante rhoncus vel. Phasellus quis urna rutrum, molestie purus.</p>
+                        </div>
+                    </div>
+                </col-12>
+            </div>
+        </div>
+    </section>
+    <section id="areas">
+        <div class="container">
+            <div class="row">
+                <div class="areas d-flex text-center flex-wrap">
+                    @foreach (var pos in ViewBag.Position)
+                    {
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="image">
+                                <img src="~/uploads/Positions/@pos.Image" alt="">
+                            </div>
+                            <div class="areaName">
+                                <p>@pos.Name</p>
+                            </div>
+                            <div class="desc">
+                                <p>@pos.Desc</p>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
