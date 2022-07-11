@@ -32,6 +32,10 @@ namespace FinalAgain.Controllers
             var data = _context.Channels.ToList();
             return View(data);
         }
+        public IActionResult Camera()
+        {
+            return View();
+        }
         public async Task<IActionResult> SetMessage([FromBody] Message messageFetch)
         {
             var name = User.Identity.Name;  

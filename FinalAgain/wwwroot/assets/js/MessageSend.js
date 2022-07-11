@@ -19,10 +19,12 @@ $("#sendButton").click(function (e) {
             return response;
         })
 })
+
 connection.on("ReceiveMessage", function (name, message) {
     console.log(connection);
     var html = `<li>
-                               <p>${name}:${message}</p>
-                            </li> `;
+                    <p>${name}:${message}</p>
+                </li> `;
     $("#messageBox").append(html);
 })
+

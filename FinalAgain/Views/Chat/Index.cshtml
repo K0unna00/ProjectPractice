@@ -6,7 +6,7 @@
 <a asp-action="channels" class="btn btn-primary">Go Back</a>
 <div class="container">
     <div class="row">
-        <div class="col-5">
+        <div class="col-4">
             <ul class="list-group">
                 <li class="list-group-item bg-secondary">Users</li>
                 @foreach (var i in Model)
@@ -15,7 +15,7 @@
                 }
             </ul>
         </div>
-        <div class="col-5">
+        <div class="col-4">
             <ul class="list-group list-unstyled" id="messageBox" style="max-height:250px;overflow-y: scroll;">
                 @foreach (var message in ViewBag.Messages)
                 {
@@ -26,16 +26,24 @@
             </ul>
             <div class="col-7 d-flex ">
                 <input id="messageInput" class="ms-0" />
-                <input type="hidden" name="@ViewBag.ChannelId" value="@ViewBag.ChannelId" id="ChannelId"/>
+                <input type="hidden" name="@ViewBag.ChannelId" value="@ViewBag.ChannelId" id="ChannelId" />
                 <a id="sendButton" class="ms-auto btn btn-primary" asp-action="SetMessage" asp-controller="Chat">
                     Send
                 </a>
             </div>
         </div>
+        <div class="col-12">
+                <a asp-action="camera" asp-controller="chat" class="btn btn-primary" id="onCam" >Open Camera</a>
+                <div class="row myCameras">
+
+                </div>
+        </div>
     </div>
 </div>
 @section scripts{
-    <script src="~/assets/js/MessageSend.js"></script>
+<script src="~/assets/js/Main.js"></script>
+<script src="~/assets/js/MessageSend.js"></script>
+<script src="~/assets/js/Camera.js"></script>
 }
 
 
