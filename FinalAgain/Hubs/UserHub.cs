@@ -43,7 +43,10 @@ namespace FinalAgain.Hubs
         {
             var name = Context.User.Identity.Name;
             await Clients.All.SendAsync("ReceiveMessage", name, text);
-            
+        }
+        public async Task ShowCameraData(AppUser user)
+        {
+            await Clients.All.SendAsync("ReceiveCameraData", user);
         }
     }
 }

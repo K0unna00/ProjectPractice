@@ -3,7 +3,7 @@
 }
 @model List<AppUser>
 
-<a asp-action="channels" class="btn btn-primary">Go Back</a>
+<a asp-action="channels" class="btn btn-primary ">Go Back</a>
 <div class="container">
     <div class="row">
         <div class="col-4">
@@ -33,15 +33,16 @@
             </div>
         </div>
         <div class="col-12">
-                <a asp-action="camera" asp-controller="chat" class="btn btn-primary" id="onCam" >Open Camera</a>
-                <div class="row myCameras">
+                <button class="btn btn-primary" id="onCam">Open Camera</button>
+                <input type="hidden" class="userInfoInput" />
+                <div class="row videoBox">
 
                 </div>
         </div>
     </div>
 </div>
 @section scripts{
-<script src="~/assets/js/Main.js"></script>
+@*<script src="~/assets/js/Main.js"></script>*@
 <script src="~/assets/js/MessageSend.js"></script>
 <script src="~/assets/js/Camera.js"></script>
 }
