@@ -1,7 +1,6 @@
 ﻿let localStream;
 let remoteStream;
 let peerConnection;
-
 const servers = {
     iceServer: [
         {
@@ -9,7 +8,6 @@ const servers = {
         }
     ]
 }
-
 let init = async () => {
     localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false })
     document.querySelectorAll(".video-player").forEach(x => {

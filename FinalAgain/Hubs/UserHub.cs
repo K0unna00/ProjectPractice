@@ -24,7 +24,7 @@ namespace FinalAgain.Hubs
                 AppUser user = _userManager.FindByNameAsync(Context.User.Identity.Name).Result;
                 user.ConnectionId = Context.ConnectionId;
                 var result = _userManager.UpdateAsync(user).Result;
-                Clients.All.SendAsync("showCamera", user);
+                Clients.Client(user.ConnectionId).SendAsync("showCamera", user);
             }
             return base.OnConnectedAsync();
         }

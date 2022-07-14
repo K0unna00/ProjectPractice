@@ -16,10 +16,10 @@ connection.on("showCamera", function (user) {
 })
 $("#onCam").click(function () {
     let videoBox = document.querySelector(".videoBox");
+    var currentUser = $(this).attr("userName");
     let check = true;
     for (let i = 0; i < videoBox.childElementCount; i++) {
-
-        if (videoBox.children[i].classList.contains(`${JSuser.userName}`)) {
+        if (videoBox.children[i].classList.contains(`${currentUser  }`)) {
             videoBox.removeChild(videoBox.children[i]);
             check = false;
             break;
